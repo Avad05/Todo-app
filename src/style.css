@@ -1,0 +1,39 @@
+body{
+    display: grid;
+    grid-template-rows: 100px 1fr 50px;
+    grid-template-columns: 1fr;
+    min-height: 100vh;
+}
+.mid{
+    display: grid;
+    grid-template-columns: 350px 1fr;
+    grid-template-rows: 1fr;
+    min-width: 100vh;
+}
+.sidebar{
+    background-color: aqua;
+}
+
+.allTask{
+    color: black;
+}
+
+/* Editing the Sidebar */
+
+.Home{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    font-size: larger;
+    padding-bottom: 20px;
+}
+
+.project{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 15px;
+    font-size: larger;
+}
+
+
