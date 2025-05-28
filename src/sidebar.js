@@ -6,6 +6,10 @@ export default function sideBar(){
     const home = document.createElement("div");
     home.classList.add("Home");
     home.textContent = "Home";
+
+    const inbox = document.createElement("div");
+    inbox.classList.add("Inbox");
+    inbox.textContent = "Inbox";
     
 
     const allTask = document.createElement("div");
@@ -35,7 +39,8 @@ export default function sideBar(){
     add.textContent = "Add Project";
 
     project.appendChild(add);
-    content.appendChild(project);    
+    content.appendChild(project);   
+     
 
       /*modal shit */
     const taskModal = hiddenModal();

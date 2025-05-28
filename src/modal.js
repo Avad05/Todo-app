@@ -1,4 +1,6 @@
+import sideBar from "./sidebar";
 export function hiddenModal(){
+    const content = document.querySelector(".content");
     const modal = document.createElement('div');
     modal.id='taskModal';
     modal.className='modal';
@@ -15,7 +17,7 @@ export function hiddenModal(){
      </div>`
 
 
-document.body.appendChild(modal);
+content.appendChild(modal);
 
 const cancelButton = document.querySelector("#cancel");
 const submitButton = document.querySelector("#submit");
@@ -29,7 +31,10 @@ cancelButton.addEventListener('click', ()=>{
 submitButton.addEventListener('click', ()=>{
     const projectTitleInput = inputTitle.value.trim();
     if(projectTitleInput){
-        console.log('Project-Title', projectTitleInput);
+        console.log(projectTitleInput);
+        const input = document.createElement('div');
+        input.textContent = projectTitleInput;
+        document.querySelector('.project').appendChild(input);
         modal.style.display = 'none';
         inputTitle.value = '';
     }
