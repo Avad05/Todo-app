@@ -1,4 +1,5 @@
 import sideBar from "./sidebar";
+import severity from "./severity";
 export function hiddenModal(){
     const content = document.querySelector(".content");
     const modal = document.createElement('div');
@@ -45,10 +46,26 @@ submitButton.addEventListener('click', ()=>{
 
         modal.style.display = 'none';
         inputTitle.value = '';
-
-
+        
+        const modal2 = document.createElement('div');
         input.addEventListener('click', ()=>{
-            content.textContent = projectTitleInput ;
+            let inside = document.createElement('div');
+            inside.textContent = projectTitleInput;
+            content.appendChild(inside);
+
+            
+            modal2.innerHTML = `
+            <div class = modal2-content>
+            <input type = "text" id = "taskName" placeholder = "TaskName">
+            <div class = modal2-button>`
+            severity();
+            `<button id = "submit2">Submit</button>
+            <button id = "cancel">Cancel</button>
+            `
+            content.appendChild(modal2);
+
+
+            
         })
         
 
@@ -64,13 +81,5 @@ return {
   };
 
 
-  const modal2 = document.createElement('div');
-modal.innerHTML = `
-<div class = modal2-content>
-<input type = "text" id = "taskName" placeholder = "TaskName">
-<div class = modal2-button>
-<button id = "submit2">Submit</button>
-<button id = "cancel">Cancel</button>
-`
-content.appendChild(modal2);
+  
 }
