@@ -44,7 +44,7 @@ export default function sideBar(){
 
       /*modal shit */
     const taskModal = hiddenModal();
-    const addingPro = document.querySelector(".add");
+    const addingPro = document.querySelector(".add")
     addingPro.addEventListener('click', ()=>{
         taskModal.open();
     });
